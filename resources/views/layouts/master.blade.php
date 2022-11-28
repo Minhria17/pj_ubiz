@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset=UTF-8>
 
     <link href="{{ asset('./css/footer.css') }}" rel="stylesheet" type="text/css" />
@@ -10,7 +11,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{{ asset('./css/cdn_css/cdn_slick_min.css') }}" rel="stylesheet" type="text/css" />
+	<link href="{{ asset('./css/cdn_css/cdn_slick_theme_min.css') }}" rel="stylesheet" type="text/css" />
     <title>Ubiz</title>
+
+
+
+	
+
 </head>
 
 
@@ -150,5 +158,9 @@
 
         gtag('config', 'UA-135017517-1');</script>
 </body>
+
+<script>
+	<script type="text/javascript" src="./js/js_cdn/cdn_slick_min.js"></script>
+</script>
 
 </html>
