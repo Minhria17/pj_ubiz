@@ -1,0 +1,186 @@
+#footer {
+    background: #e9eff2 url(//chuyentienviettrung.vn/wp-content/themes/chuyentienviettrung/css/demos/../../img/demos/chuyentienviettrung/footer-chuyentienviettrung.jpg) no-repeat 50% 50%;
+    border-top: 0;
+    padding: 60px 0 30px;
+    min-height: 400px;
+    overflow: hidden;
+    font-size: .9em;
+    position: relative;
+    clear: both;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#footer .container .row>div {
+    margin-bottom: 25px;
+}
+
+
+#footer a {
+    color: #333;
+    text-decoration: none;
+}
+
+#footer a:hover{
+    color: #0d6efd;
+} 
+
+a {
+   
+    background-color: transparent;
+}
+
+a, a:hover, a:focus {
+    color: #ccc;
+}
+
+.social-icons {
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+.mt-md {
+    margin-top: 15px !important;
+}
+
+ul {
+    display: block;
+    list-style: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+}
+
+ul.list.list-footer-nav {
+    padding: 0px 13px;
+}
+
+.list li {
+    margin-bottom: 13px;
+}
+
+li {
+    line-height: 24px;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+li.social-icons-facebook a:hover {
+    background-color: #337ab7;
+}
+
+li.social-icons-twitter a:hover {
+    background-color: #209dad;
+}
+
+#footer .list-footer-nav a {
+    font-size: 14px;
+    color: #777;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#footer .footer-copyright {
+    background: 0 0;
+    margin: -10px 0 0;
+    padding: 20px 0 0;
+    border-top: 1px solid #fff;
+}
+
+#footer .footer-copyright p {
+    color: #ababab;
+    margin: 0;
+    padding: 0;
+}
+#footer .newsletter form .btn-default {
+    height: 45px;
+    width: 45px;
+    font-size: initial;
+    border: 0.5px solid black;
+    margin-left: 1px;
+}
+
+.align-center, .center {
+    text-align: center !important;
+}
+
+.input-group {
+    padding-top: 15px;
+}
+
+
+
+.btn-default:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+    text-decoration: none;
+}
+
+
+#footer .fa {
+    display: inline-block;
+    padding-right: 2px;
+    position: relative;
+    top: 1px;
+    
+    color: #000;
+}
+
+
+
+i.fa.fa-map-marker {
+    padding-top: 20px;
+}
+
+.social-icons li a {
+    display: inline-block;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+    background: #fff;
+    border-radius: 100%;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+    text-align: center;
+    color: #333 !important;
+    text-decoration: none;
+}
+ul.social-icons.mt-md {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0% 30%;
+}
+
+@media (max-width:991px){
+    footer{
+        background-color: black;
+    }
+    .row {
+        display: block  !important;
+    }
+    
+}
+
+@media (max-width: 992px){
+    .col-md-4 {
+        flex: 0 0 auto;
+        width: 100.333333% !important;
+    }
+    .col-md-3 {
+        flex: 0 0 auto;
+        width: 100% !important;
+    }
+}
