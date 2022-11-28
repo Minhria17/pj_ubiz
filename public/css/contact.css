@@ -1,0 +1,11 @@
+.content-contact{
+    height: auto;
+    padding: 0 12%;
+
+}
+
+.content-contact .contact-col{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 70% 30%;
+}
