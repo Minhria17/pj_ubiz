@@ -1,4 +1,258 @@
 @extends('layouts.master')
+<link href="{{ asset('./css/home.css') }}" rel="stylesheet" type="text/css" />
 @section('content')
-	<p>Đây là phần hiển thị nội dung chính của trang</p>
+	  <div class="block_1">
+        <div class="mySlides"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+        <div class="mySlides"><img src="./image/banner2-chuyen-tien-trung-quoc.png" alt=""></div>
+    </div>
+    <div class="block_2">
+        <div class="title_b2">
+          <h2>Chuyển Tiền Trung Quốc</h2>
+          <span>UyTín - Nhanh chóng - Đơn giản - An toàn</span>
+        </div>
+        <div class="about_b2">
+          <span>chuyentienviettrung.vn là địa chỉ uy tín giúp bạn kết nối với đối tác ở Trung Quốc hay người thân của mình.  Chúng tôi có thể làm được gì?
+            Chúng tôi giúp các bạn chuyển tiền một cách nhanh chóng để công việc kinh doanh của bạn tiếp tục trôi chảy.
+            Ngoài ra các bạn còn có thể nhận được tiền gửi về từ Trung Quốc mà người nhà gửi cho cho mình.  Thành công của chúng tôi đến từ khách hàng của mình:
+            Các bạn chỉ cần sử dụng dịch vụ và yên tâm với số tiền của mình sẽ được chuyển đúng địa chỉ một cách nhanh nhất.  Tạo kết nối.
+            Tham gia cộng đồng của chúng tôi trên facebook để kết nối ngay lập tức với anh em dân buôn hàng trung quốc ngay lập tức.</span><br><br>
+            <a href="#">Chuyển tiền ngay để trải nghiệm dịch vụ!!!  <i class="fa fa-long-arrow-right" style="color:#1030e6"></i></a>
+        </div>
+    </div>
+    <div class="block_3">
+      <div class="title_b3">
+        <h2>TỈ GIÁ QUY ĐỔI</h2>
+      </div>
+      <div class="coutdown">
+        <span class="time">15:23:11</span>, <span class="date">24/11/2022</span>
+      </div>
+      <div class="box_exchange_rate">
+        <div class="box_1">
+          <h2>TỈ GIÁ MUA</h2>
+          <span>3490</span>
+        </div>
+        <div class="box_2">
+          <h2>TỈ GIÁ BÁN</h2>
+          <span>3490</span>
+        </div>
+        <div class="box_3">
+          <h2>TỈ GIÁ THANH TOÁN HỘ 1688</h2>
+          <span>3490</span>
+        </div>
+        <div class="box_4">
+          <h2>TỈ GIÁ QUÉT MÃ TAOBAO</h2>
+          <span>3490</span>
+        </div>
+      </div>
+    </div>
+    <div class="block_4">
+      <div class="title_b4">
+        <h2>Tin mới nhất</h2>
+        <a href="#">Xem thêm tin tức</a>
+      </div>
+      <div class="data_news">
+        <div class="box_news">
+          <div class="img_news"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+          <div class="title_date">
+            <div class="date">
+              <div class="day"><span>09</span></div>
+              <div class="month"><i>Th.</i><span>08</span></div>
+            </div>
+            <div class="title">
+              <a href="#">Lệnh cấm Wechat, Tiktok của Trump sẽ có tác động gì với chúng ta</a>
+            </div>
+          </div>
+          <div class="content">
+            <span>Lệnh hành pháp của Tổng thống Mỹ cấm ứng dụng nhắn tin ở Mỹ có thể ảnh hưởng đến truyền thông kinh doanh. Khách hàng của Apple lo lắng WeChat có thể bị rút khỏi câu chuyện ứng dụng, khiến họ rơi vào tình thế khó xử. Đọc thêm các tin tức: Trung Quốc thành […]</span>
+          </div>
+          <div class="view_more"><span>Đọc tiếp </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
+        </div>
+        <div class="box_news">
+          <div class="img_news"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+          <div class="title_date">
+            <div class="date">
+              <div class="day"><span>09</span></div>
+              <div class="month"><i>Th.</i><span>08</span></div>
+            </div>
+            <div class="title">
+              <a href="#">Lệnh cấm Wechat, Tiktok của Trump sẽ có tác động gì với chúng ta</a>
+            </div>
+          </div>
+          <div class="content">
+            <span>Lệnh hành pháp của Tổng thống Mỹ cấm ứng dụng nhắn tin ở Mỹ có thể ảnh hưởng đến truyền thông kinh doanh. Khách hàng của Apple lo lắng WeChat có thể bị rút khỏi câu chuyện ứng dụng, khiến họ rơi vào tình thế khó xử. Đọc thêm các tin tức: Trung Quốc thành […]</span>
+          </div>
+          <div class="view_more"><span>Đọc tiếp </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
+        </div>
+        <div class="box_news">
+          <div class="img_news"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+          <div class="title_date">
+            <div class="date">
+              <div class="day"><span>09</span></div>
+              <div class="month"><i>Th.</i><span>08</span></div>
+            </div>
+            <div class="title">
+              <a href="#">Lệnh cấm Wechat, Tiktok của Trump sẽ có tác động gì với chúng ta</a>
+            </div>
+          </div>
+          <div class="content">
+            <span>Lệnh hành pháp của Tổng thống Mỹ cấm ứng dụng nhắn tin ở Mỹ có thể ảnh hưởng đến truyền thông kinh doanh. Khách hàng của Apple lo lắng WeChat có thể bị rút khỏi câu chuyện ứng dụng, khiến họ rơi vào tình thế khó xử. Đọc thêm các tin tức: Trung Quốc thành […]</span>
+          </div>
+          <div class="view_more"><span>Đọc tiếp </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="block_4">
+      <div class="title_b4">
+        <h2>Góc tư vấn</h2>
+        <a href="#">Xem thêm bài viết</a>
+      </div>
+      <div class="data_news">
+        <div class="box_news">
+          <div class="img_news"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+          <div class="title_date">
+            <div class="date">
+              <div class="day"><span>09</span></div>
+              <div class="month"><i>Th.</i><span>08</span></div>
+            </div>
+            <div class="title">
+              <a href="#">Lệnh cấm Wechat, Tiktok của Trump sẽ có tác động gì với chúng ta</a>
+            </div>
+          </div>
+          <div class="content">
+            <span>Lệnh hành pháp của Tổng thống Mỹ cấm ứng dụng nhắn tin ở Mỹ có thể ảnh hưởng đến truyền thông kinh doanh. Khách hàng của Apple lo lắng WeChat có thể bị rút khỏi câu chuyện ứng dụng, khiến họ rơi vào tình thế khó xử. Đọc thêm các tin tức: Trung Quốc thành […]</span>
+          </div>
+          <div class="view_more"><span>Đọc tiếp </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
+        </div>
+        <div class="box_news">
+          <div class="img_news"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+          <div class="title_date">
+            <div class="date">
+              <div class="day"><span>09</span></div>
+              <div class="month"><i>Th.</i><span>08</span></div>
+            </div>
+            <div class="title">
+              <a href="#">Lệnh cấm Wechat, Tiktok của Trump sẽ có tác động gì với chúng ta</a>
+            </div>
+          </div>
+          <div class="content">
+            <span>Lệnh hành pháp của Tổng thống Mỹ cấm ứng dụng nhắn tin ở Mỹ có thể ảnh hưởng đến truyền thông kinh doanh. Khách hàng của Apple lo lắng WeChat có thể bị rút khỏi câu chuyện ứng dụng, khiến họ rơi vào tình thế khó xử. Đọc thêm các tin tức: Trung Quốc thành […]</span>
+          </div>
+          <div class="view_more"><span>Đọc tiếp </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
+        </div>
+        <div class="box_news">
+          <div class="img_news"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+          <div class="title_date">
+            <div class="date">
+              <div class="day"><span>09</span></div>
+              <div class="month"><i>Th.</i><span>08</span></div>
+            </div>
+            <div class="title">
+              <a href="#">Lệnh cấm Wechat, Tiktok của Trump sẽ có tác động gì với chúng ta</a>
+            </div>
+          </div>
+          <div class="content">
+            <span>Lệnh hành pháp của Tổng thống Mỹ cấm ứng dụng nhắn tin ở Mỹ có thể ảnh hưởng đến truyền thông kinh doanh. Khách hàng của Apple lo lắng WeChat có thể bị rút khỏi câu chuyện ứng dụng, khiến họ rơi vào tình thế khó xử. Đọc thêm các tin tức: Trung Quốc thành […]</span>
+          </div>
+          <div class="view_more"><span>Đọc tiếp </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="block_5">
+      <div class="title_b5">
+        <h2>Dịch vụ</h2>
+        <span>Các dịch vụ tại chuyentienviettrung.vn</span>
+      </div>
+      <div class="data_transfers">
+        <div class="box_transfers">
+          <div class="img"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+          <div class="content">
+            <div class="title">
+              <a href="#">CHUYỂN TIỀN TRUNG QUỐC</a><br>
+              <span>Dịch vụ chuyển tiền Trung Quốc</span>
+            </div>
+            <div class="text_ct">
+              <span>Bạn là người Việt Nam bạn đang có nhu cầu sử dụng dịch vụ chuyển tiền Trung Quốc để thanh toán tiền hàng? Hay muốn chuyển tiền cho người thân bạn bè đang cư trú bên đó? Nắm bắt được tình hình trên hiện nay có rất nhiều các loại dịch vụ chuyển tiền nhanh […]</span>
+            </div>
+            <div class="view_more"><span>Tìm hiểu thêm </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
+          </div>
+        </div>
+        <div class="box_transfers">
+          <div class="img"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+          <div class="content">
+            <div class="title">
+              <a href="#">CHUYỂN TIỀN TRUNG QUỐC</a><br>
+              <span>Dịch vụ chuyển tiền Trung Quốc</span>
+            </div>
+            <div class="text_ct">
+              <span>Bạn là người Việt Nam bạn đang có nhu cầu sử dụng dịch vụ chuyển tiền Trung Quốc để thanh toán tiền hàng? Hay muốn chuyển tiền cho người thân bạn bè đang cư trú bên đó? Nắm bắt được tình hình trên hiện nay có rất nhiều các loại dịch vụ chuyển tiền nhanh […]</span>
+            </div>
+            <div class="view_more"><span>Tìm hiểu thêm </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
+          </div>
+        </div>
+        <div class="box_transfers">
+          <div class="img"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+          <div class="content">
+            <div class="title">
+              <a href="#">CHUYỂN TIỀN TRUNG QUỐC</a><br>
+              <span>Dịch vụ chuyển tiền Trung Quốc</span>
+            </div>
+            <div class="text_ct">
+              <span>Bạn là người Việt Nam bạn đang có nhu cầu sử dụng dịch vụ chuyển tiền Trung Quốc để thanh toán tiền hàng? Hay muốn chuyển tiền cho người thân bạn bè đang cư trú bên đó? Nắm bắt được tình hình trên hiện nay có rất nhiều các loại dịch vụ chuyển tiền nhanh […]</span>
+            </div>
+            <div class="view_more"><span>Tìm hiểu thêm </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
+          </div>
+        </div>
+        <div class="box_transfers">
+          <div class="img"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+          <div class="content">
+            <div class="title">
+              <a href="#">CHUYỂN TIỀN TRUNG QUỐC</a><br>
+              <span>Dịch vụ chuyển tiền Trung Quốc</span>
+            </div>
+            <div class="text_ct">
+              <span>Bạn là người Việt Nam bạn đang có nhu cầu sử dụng dịch vụ chuyển tiền Trung Quốc để thanh toán tiền hàng? Hay muốn chuyển tiền cho người thân bạn bè đang cư trú bên đó? Nắm bắt được tình hình trên hiện nay có rất nhiều các loại dịch vụ chuyển tiền nhanh […]</span>
+            </div>
+            <div class="view_more"><span>Tìm hiểu thêm </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block_6">
+      <div class="title_b6">
+        <h2>Hỗ trợ thanh toán</h2>
+      </div>
+      <div class="content_bank">
+        <div class="slick-slide-bank">
+          <div class="img_bank"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+          <div class="img_bank"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+          <div class="img_bank"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+          <div class="img_bank"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+          <div class="img_bank"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+          <div class="img_bank"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+          <div class="img_bank"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+          <div class="img_bank"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript">
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) { 
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 7000);
+        }
+    </script>
 @endsection
