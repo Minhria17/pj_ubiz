@@ -20,3 +20,15 @@ Route::get('/', function () {
 Route::get('/contact', function () {
     return view('body.contact');
 });
+Route::get('/introduce', function () {
+    return view('body.introduce');
+});
+Route::get('/exchange-rate', function () {
+    return view('body.exchange_rate');
+});
+Route::get('/news', function () {
+    return view('body.news');
+});
+Route::get('/advise', function () {
+    return view('body.advise');
+});

@@ -14,11 +14,6 @@
     <link href="{{ asset('./css/cdn_css/cdn_slick_min.css') }}" rel="stylesheet" type="text/css" />
 	<link href="{{ asset('./css/cdn_css/cdn_slick_theme_min.css') }}" rel="stylesheet" type="text/css" />
     <title>Ubiz</title>
-
-
-
-	
-
 </head>
 
 
@@ -32,9 +27,9 @@
 
         <nav class="navbar">
             <ul>
-                <li><a href="">Trang chủ</a></li>
-                <li><a href="">Giới thiệu</a></li>
-                <li><a href="">Tỷ Giá Nhân Dân Tệ</a></li>
+                <li><a href="/">Trang chủ</a></li>
+                <li><a href="{{ asset('introduce') }}">Giới thiệu</a></li>
+                <li><a href="{{ asset('exchange-rate') }}">Tỷ Giá Nhân Dân Tệ</a></li>
                 <li><a href="">Dịch Vụ</a>
                     <ul>
                         <li><a href="">Chuyển tiền Trung Quốc</a></li>
@@ -45,8 +40,8 @@
 							<li><a href="">Chuyển tiền Webchat</a></li>
                     </ul>
                 </li>
-                <li><a href="">Tin Tức</a></li>
-                <li><a href="">Góc Tư Vấn</a></li>
+                <li><a href="{{ asset('news') }}">Tin Tức</a></li>
+                <li><a href="{{ asset('advise') }}">Góc Tư Vấn</a></li>
                 <li><a href="{{ asset('contact') }}">Liên Hệ</a></li>
             </ul>
 
@@ -159,8 +154,7 @@
         gtag('config', 'UA-135017517-1');</script>
 </body>
 
-<script>
 	<script type="text/javascript" src="./js/js_cdn/cdn_slick_min.js"></script>
-</script>
+	<script type="text/javascript" src="./js/scrip.js"></script>
 
 </html>

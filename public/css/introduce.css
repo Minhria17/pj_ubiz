@@ -1,0 +1,16 @@
+.content-left .img-title h1 {
+    margin: 4% 0%;
+    font-size: 2.6em;
+    line-height: 44px;
+}
+.content-left .content-title h2 {
+    font-size: 2.2em;
+    font-weight: 300;
+}
+.content-left .content-title .ct-1, .ct-2 {
+    margin-top: 4%;
+}
+.content-left .content-title .ct-1 span, .content-left .content-title .ct-2 span {
+    font-size: 14px;
+    line-height: 24px;
+}
