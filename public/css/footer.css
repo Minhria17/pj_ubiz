@@ -15,7 +15,7 @@
     margin-right: auto;
     margin-left: auto;
 }
-
+ 
 #footer .container .row>div {
     margin-bottom: 25px;
 }
@@ -174,7 +174,7 @@ ul.social-icons.mt-md {
     
 }
 
-@media (max-width: 992px){
+@media (max-width: 991px){
     .col-md-4 {
         flex: 0 0 auto;
         width: 100.333333% !important;

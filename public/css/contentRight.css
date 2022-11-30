@@ -1,0 +1,101 @@
+.container-ct {
+    display: flex;
+    padding: 2% 8%;
+    width: 100%;
+}
+.content-left {
+    width: 70%;
+    padding: 0% 4%;
+}
+.content-right {
+    width: 30%;
+}
+ul.nav-list li a:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid #333;
+    margin: 7px 0 0 -9px;
+    position: absolute;
+}
+.content-right .service h4, .content-right .advise h4, .content-right .contact h4 {
+    color: #2e353e !important;
+    font-size: 1.4em;
+    font-weight: 400;
+    margin-bottom: 15px !important;
+}
+ul.nav-list>li>a {
+    text-decoration: unset;
+    color: #666;
+    font-size: .9em;
+}
+ul.nav-list {
+    padding: 0 !important;
+}
+ul.nav-list>li {
+    padding: 8px 0 8px 18px;
+    border-bottom: 1px solid #ededde;
+}
+ul.nav-list>li:hover {
+    background-color: #eee;
+    text-decoration: none;
+}
+.content-right .advise .box-data {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2%;
+}
+.content-right .advise .box-data .img{
+    width: 180px;
+    height: 80px;
+    margin-right: 5%;
+}
+.content-right .advise .box-data .img img{
+    width: 100%;
+    height: 100%;
+}
+.content-right .advise .box-data .title a{
+    color: #2e353e;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+.contact span{
+    font-size: 14px;
+    line-height: 28px;
+}
+.contact .btn-send{
+    margin-top: 1%;
+}
+.contact .btn-send button{
+    color: #fff;
+    background-color: #1030e6;
+    border-color: #e04622 #e04622 #b63719;
+    border: none;
+    padding: 8px;
+    font-size: 14px;
+}
+.contact input, .contact textarea{
+    width: 100%;
+    border: 1px solid #ccc;
+    color: #555;
+    font-size: 14px;
+    padding: 6px 12px;
+    margin-bottom: 1%;
+}
+@media only screen and (max-width: 991px){
+    .container-ct {
+        display: unset;
+    }
+    .content-left {
+        width: 100%;
+        padding: 0% 4%;
+    }
+    .content-right {
+        width: 100%;
+        padding: 0% 4%;
+    }
+}

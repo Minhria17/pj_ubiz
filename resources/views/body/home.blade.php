@@ -24,7 +24,7 @@
         <h2>TỈ GIÁ QUY ĐỔI</h2>
       </div>
       <div class="coutdown">
-        <span class="time">15:23:11</span>, <span class="date">24/11/2022</span>
+        <span class="time" id="converter_clock"></span>, <span class="date" id="current-time"></span>
       </div>
       <div class="box_exchange_rate">
         <div class="box_1">
@@ -223,14 +223,12 @@
       </div>
       <div class="content_bank">
         <div class="slick-slide-bank">
-          <div class="img_bank"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
-          <div class="img_bank"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
-          <div class="img_bank"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
-          <div class="img_bank"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
-          <div class="img_bank"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
-          <div class="img_bank"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
-          <div class="img_bank"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
-          <div class="img_bank"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+          <div class="img_bank"><img src="./image/foody-upload-api-foody-mobile-agribank-190123165100.jpg" alt=""></div>
+          <div class="img_bank"><img src="./image/foody-upload-api-foody-mobile-techcombank-190123093622.jpg" alt=""></div>
+          <div class="img_bank"><img src="./image/ngan-hang-BIDV.jpg" alt=""></div>
+          <div class="img_bank"><img src="./image/thebank_logonganhangvcb_1620178788.jpg" alt=""></div>
+          <div class="img_bank"><img src="./image/ve-may-bay-sa-com-bank-da-ly-khong.jpg" alt=""></div>
+          <div class="img_bank"><img src="./image/bieu-tuong-vietinbank.jpg" alt=""></div>
         </div>
       </div>
     </div>
