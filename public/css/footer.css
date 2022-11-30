@@ -184,3 +184,12 @@ ul.social-icons.mt-md {
         width: 100% !important;
     }
 }
+
+i.fa.fa-facebook {
+    padding: 6px 2px;
+}
+
+i.fa.fa-twitter {
+    padding: 6px 2px;
+}
+    
