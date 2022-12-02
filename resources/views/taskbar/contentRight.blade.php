@@ -1,8 +1,14 @@
 
 <link href="{{ asset('./css/contentRight.css') }}" rel="stylesheet" type="text/css" />
-
+@if (\Session::has('success'))
+    <div class="alert alert-success">
+        <ul>
+            <li>{!! \Session::get('success') !!}</li>
+        </ul>
+    </div>
+@endif
     <div class="service">
-        <h4>Dịch vụ</h4>
+        <h4>Dịch vụ</h4> 
         <ul class="nav-list">
             <li><a href="https://chuyentienviettrung.vn/trung-quoc/" target="_blank">Chuyển tiền trung quốc</a></li>
             <li><a href="https://chuyentienviettrung.vn/trung-quoc-ve-viet-nam/" target="_blank">Chuyển tiền Trung Quốc về Việt Nam</a></li>
@@ -30,21 +36,23 @@
     <div class="contact">
         <h4>Liên hệ</h4>
         <span>Liên hệ với chúng tôi để được hỗ trợ tư vấn kịp thời.</span>
-        <form action="">
+        <form method="POST" action="{{ url('admin_ubiz@2022/insert_contact') }}" enctype="multipart/form-data">
+            @csrf
             <div class="name">
                 <span>Họ và tên *</span><br>
-                <input type="text">
+                <input type="text" name="name" id="name_contact" required>
             </div>
             <div class="phone">
                 <span>Số điện thoại *</span><br>
-                <input type="number">
+                <input type="number" name="phone" id="phone_contact" required>
             </div>
             <div class="message">
                 <span>Lời nhắn *</span><br>
-                <textarea name="" id="" cols="20" rows="5"></textarea>
+                <textarea id="note_contact" name="note" id="" cols="20" rows="5"></textarea>
             </div>
             <div class="btn-send">
-                <button>Gửi thông tin</button>
+                <button type="submit">Gửi thông tin</button>
             </div>
         </form>
     </div>
+    

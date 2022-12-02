@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\contact;
 use App\Models\User;
 
 use App\Models\News;
@@ -43,7 +45,7 @@ class AdminController extends Controller
 
     public function news_add(Request $request,News $News){
         if ($request->Title == '' || $request->Content == ''  ){
-            return redirect('admin_ubiz@2022/add_news/')->with(['flash_level' => 'danger' , 'flash_message' => 'Vui lòng điều vào các trường có *' ]);
+            return redirect('admin_ubiz@2022/add_news/')->with(['flash_level' => 'danger' , 'flash_message' => 'Vui lòng điền vào các trường có *' ]);
     }
 
     $News = new News;
@@ -118,6 +120,12 @@ class AdminController extends Controller
         return view('admin_cms.new_cat.list',compact('NewsCategory'));
 
     }
+    public function contact(){
+        // $NewsCategory = Newscategory::where('Status','1')->get();
+        $contact = contact::get();
+        return view('admin_cms.contact',compact('contact'));
+
+    }
     public function news_cat_getedit($id){
         $NewsCategory = Newscategory::find($id);
 
@@ -182,6 +190,34 @@ class AdminController extends Controller
        }else{
         return redirect('admin_ubiz@2022/list_news_cat')->with(['flash_level' => 'danger' , 'flash_message' => 'Lỗi Xóa Tin tức' ]);
        }
+    }
+    public function contact_delete(Request $request , $id){
+
+       
+        $contact = contact::find($id);
+        $contact->delete();
+
+        if ($contact == true) {
+            return redirect('admin_ubiz@2022/contact')->with(['flash_level' => 'success' , 'flash_message' => 'Xóa liên hệ thành công' ]);
+       }else{
+        return redirect('admin_ubiz@2022/contact')->with(['flash_level' => 'danger' , 'flash_message' => 'Lỗi xóa liên hệ' ]);
+       }
+    }
+    public function contact_insert(Request $request,contact $contact){
+
+    $contact = new contact;
+    $contact->name = $request->name;
+    $contact->phone = $request->phone;
+    $contact->note = $request->note;
+
+    $Flag =$contact->save();  
+    
+    if ($Flag == true) {
+        return redirect()->back()->with(['success' => 'Để lại lời nhắn thành công !']);
+   }else{
+    return redirect()->back()->with(['error' => 'Để lại lời nhắn không thành công !']);
+   }
+
     }
 
 

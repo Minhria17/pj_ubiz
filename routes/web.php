@@ -76,4 +76,10 @@ Route::get('/wechat', function () {
 Route::get('/news-detail', function () {
     return view('body.news_detail');
 });
+Route::get('/admin_ubiz@2022/contact',[AdminController::class,'contact']);
+Route::get('/admin_ubiz@2022/delete_contact/{id}',[AdminController::class,'contact_delete']);
 
+Route::post('admin_ubiz@2022/insert_contact',[AdminController::class,'contact_insert']);
+// Route::get('/admin_ubiz@2022/insert_contact',[AdminController::class,'contact_insert']);
+
+// Route::post('/admin_ubiz@2022/insert_contact', 'AdminController@contact_insert');

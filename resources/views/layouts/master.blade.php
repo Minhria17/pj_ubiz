@@ -153,7 +153,8 @@
 
         gtag('config', 'UA-135017517-1');</script>
 </body>
-
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="./js/js_cdn/cdn_slick_min.js"></script>
 	<script type="text/javascript" src="./js/scrip.js"></script>
 
