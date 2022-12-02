@@ -28,20 +28,20 @@
         <nav class="navbar">
             <ul>
                 <li><a href="/">Trang chủ</a></li>
-                <li><a href="{{ asset('introduce') }}">Giới thiệu</a></li>
-                <li><a href="{{ asset('exchange-rate') }}">Tỷ Giá Nhân Dân Tệ</a></li>
+                <li><a href="{{ asset('gioi-thieu') }}">Giới thiệu</a></li>
+                <li><a href="{{ asset('ty-gia-nhan-dan-te') }}">Tỷ Giá Nhân Dân Tệ</a></li>
                 <li><a href="">Dịch Vụ</a>
                     <ul>
-                        <li><a href="">Chuyển tiền Trung Quốc</a></li>
-							<li><a href="">Chuyển Tiền Trung Quốc về Việt Nam</a></li>
-							<li><a href="">Thanh toán hộ 1688</a></li>
-							<li><a href="">Thanh Toán hộ TaoBao</a></li>
-							<li><a href="">Nạp tiền Alipay</a></li>
-							<li><a href="">Chuyển tiền Webchat</a></li>
+                        <li><a href="{{ asset('trung-quoc') }}">Chuyển tiền Trung Quốc</a></li>
+							<li><a href="{{ asset('trung-quoc-ve-viet-nam') }}">Chuyển Tiền Trung Quốc về Việt Nam</a></li>
+							<li><a href="{{ asset('dich-vu-thanh-toan-ho-tren-1688') }}">Thanh toán hộ 1688</a></li>
+							<li><a href="{{ asset('dich-vu-thanh-toan-ho-tren-taobao-qua-alipay-mot-cach-don-gian-de-dang') }}">Thanh Toán hộ TaoBao</a></li>
+							<li><a href="{{ asset('nap-tien-alipay') }}">Nạp tiền Alipay</a></li>
+							<li><a href="{{ asset('wechat') }}">Chuyển tiền Webchat</a></li>
                     </ul>
                 </li>
-                <li><a href="{{ asset('news') }}">Tin Tức</a></li>
-                <li><a href="{{ asset('advise') }}">Góc Tư Vấn</a></li>
+                <li><a href="{{ asset('tin-tuc') }}">Tin Tức</a></li>
+                <li><a href="{{ asset('goc-tu-van') }}">Góc Tư Vấn</a></li>
                 <li><a href="{{ asset('contact') }}">Liên Hệ</a></li>
             </ul>
 

@@ -1,0 +1,19 @@
+.content-left h1 {
+    font-size: 2.6em;
+    margin-bottom: 7%;
+}
+.content-detail span, .content-detail a, .content-detail li, .content-detail i{
+    font-size: 14px;
+}
+.content-detail img{
+    width: 100%;
+}
+.content-detail h2{
+    font-weight: 700;
+    color: #1030e6;
+}
+.content-detail .note-content {
+    padding: 2%;
+    border-left: 6px solid #eee;
+    margin-bottom: 2%;
+}

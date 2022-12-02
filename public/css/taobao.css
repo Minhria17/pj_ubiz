@@ -1,0 +1,25 @@
+.content-left h1 {
+    font-size: 2.6em;
+    margin-bottom: 7%;
+}
+.content-taobao span, .content-taobao a, .content-taobao li, .content-taobao i{
+    font-size: 14px;
+}
+.content-taobao img{
+    width: 100%;
+}
+.content-taobao h2{
+    font-weight: 700;
+    color: #1030e6;
+}
+.content-taobao .note-content {
+    padding: 2%;
+    border-left: 6px solid #eee;
+    margin-bottom: 2%;
+}
+.content-taobao ul {
+    list-style: unset;
+}
+.content-taobao a{
+    text-decoration: none;
+}

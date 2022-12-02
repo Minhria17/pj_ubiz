@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-ct">
         <div class="content-left">
-            <h1>Góc tư vấn</h1>
+            <h1>Chuyển tiền Trung Quốc</h1>
             <div class="data-advise">
                 <div class="data-first">
                     <div class="box_news">

@@ -1,0 +1,23 @@
+.content-left h1 {
+    font-size: 2.6em;
+    margin-bottom: 7%;
+}
+.content-left h2 {
+    font-size: 2.2em;
+    font-weight: 700;
+}
+.content-1688 span, .content-1688 a, .content-1688 li{
+    font-size: 14px;
+}
+.content-1688 a{
+    font-weight: 700;
+    text-decoration: none;
+}
+.content-1688 .note-content {
+    padding: 2%;
+    border-left: 6px solid #eee;
+    margin-bottom: 2%;
+}
+.content-1688 ul {
+    list-style: unset;
+}
