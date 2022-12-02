@@ -198,7 +198,11 @@
 <script src="{{ url('/admin/dist/js/pages/dashboard.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ url('/admin/dist/js/demo.js')}}"></script>
+<!-- AdminLTE for ckeditor -->
+<script src="{{ url('/ckeditor4.14/ckeditor.js')}}"></script>
 
+
+<script src="{{ url('/admin/plugins/summernote/summernote-bs4.js') }}"></script>
 
 
 <!-- DataTables -->
@@ -225,6 +229,15 @@
     });
   });
 </script>
+
+<script>
+  
+  CKEDITOR.replace( 'editor' );
+</script>
+
+
+
+
 
 </body>
 </html>
