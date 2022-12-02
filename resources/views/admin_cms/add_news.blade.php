@@ -54,9 +54,16 @@ active
           
           <div class="form-group">
             <label for="exampleInputEmail1">Mô tả tin tức <span style="color: red">*</span> </label>
-            <textarea name="Content" id="" class="form-control" rows="8"></textarea>
+            <textarea name="Content" id="editor" class="form-control" rows="8" ></textarea>
            
           </div>
+
+          <div class="form-group">
+            <textarea id="compose-textarea" class="form-control" style="height: 300px">
+             
+            </textarea>
+        </div>
+
          
           
          
@@ -72,4 +79,13 @@ active
  
     
   </div>
+
+  <script>
+    $(function () {
+      //Add text editor
+      $('#compose-textarea').summernote()
+    })
+  </script>
+
+
 @endsection    
