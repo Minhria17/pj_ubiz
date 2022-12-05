@@ -32,8 +32,8 @@
           <span>{{ $rate->purchase_rate }}</span>
         </div>
         <div class="box_2">
-          <h2>{{ $rate->selling_rate }}</h2>
-          <span>3490</span>
+          <h2>TỈ GIÁ BÁN</h2>
+          <span>{{ $rate->selling_rate }}</span>
         </div>
         <div class="box_3">
           <h2>TỈ GIÁ THANH TOÁN HỘ 1688</h2>
@@ -53,14 +53,14 @@
       <div class="data_news">
         @foreach($news_hot as $new)
         <div class="box_news">
-          <div class="img_news"><img src="{{ $new->img }}" alt=""></div>
+          <div class="img_news"><img src="./image/{{ $new->img }}" alt=""></div>
           <div class="title_date">
             <div class="date">
               <div class="day"><span>09</span></div>
               <div class="month"><i>Th.</i><span>08</span></div>
             </div>
             <div class="title">
-              <a href="#">{{ $new->title }}</a>
+              <a href="{{ asset('tin-tuc/'.$new->id) }}">{{ $new->title }}</a>
             </div>
           </div>
           <div class="content">
@@ -69,38 +69,7 @@
           <div class="view_more"><span>Đọc tiếp </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
         </div>
         @endforeach
-        {{-- <div class="box_news">
-          <div class="img_news"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
-          <div class="title_date">
-            <div class="date">
-              <div class="day"><span>09</span></div>
-              <div class="month"><i>Th.</i><span>08</span></div>
-            </div>
-            <div class="title">
-              <a href="#">Lệnh cấm Wechat, Tiktok của Trump sẽ có tác động gì với chúng ta</a>
-            </div>
-          </div>
-          <div class="content">
-            <span>Lệnh hành pháp của Tổng thống Mỹ cấm ứng dụng nhắn tin ở Mỹ có thể ảnh hưởng đến truyền thông kinh doanh. Khách hàng của Apple lo lắng WeChat có thể bị rút khỏi câu chuyện ứng dụng, khiến họ rơi vào tình thế khó xử. Đọc thêm các tin tức: Trung Quốc thành […]</span>
-          </div>
-          <div class="view_more"><span>Đọc tiếp </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
-        </div>
-        <div class="box_news">
-          <div class="img_news"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
-          <div class="title_date">
-            <div class="date">
-              <div class="day"><span>09</span></div>
-              <div class="month"><i>Th.</i><span>08</span></div>
-            </div>
-            <div class="title">
-              <a href="#">Lệnh cấm Wechat, Tiktok của Trump sẽ có tác động gì với chúng ta</a>
-            </div>
-          </div>
-          <div class="content">
-            <span>Lệnh hành pháp của Tổng thống Mỹ cấm ứng dụng nhắn tin ở Mỹ có thể ảnh hưởng đến truyền thông kinh doanh. Khách hàng của Apple lo lắng WeChat có thể bị rút khỏi câu chuyện ứng dụng, khiến họ rơi vào tình thế khó xử. Đọc thêm các tin tức: Trung Quốc thành […]</span>
-          </div>
-          <div class="view_more"><span>Đọc tiếp </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
-        </div> --}}
+     
       </div>
     </div>
     <div class="block_4">
@@ -118,7 +87,7 @@
               <div class="month"><i>Th.</i><span>08</span></div>
             </div>
             <div class="title">
-              <a href="#">{{ $new_advise->title }}</a>
+              <a href="{{ asset('tin-tuc/'.$new_advise->id) }}">{{ $new_advise->title }}</a>
             </div>
           </div>
           <div class="content">
@@ -127,38 +96,7 @@
           <div class="view_more"><span>Đọc tiếp </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
         </div>
         @endforeach
-        {{-- <div class="box_news">
-          <div class="img_news"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
-          <div class="title_date">
-            <div class="date">
-              <div class="day"><span>09</span></div>
-              <div class="month"><i>Th.</i><span>08</span></div>
-            </div>
-            <div class="title">
-              <a href="#">Lệnh cấm Wechat, Tiktok của Trump sẽ có tác động gì với chúng ta</a>
-            </div>
-          </div>
-          <div class="content">
-            <span>Lệnh hành pháp của Tổng thống Mỹ cấm ứng dụng nhắn tin ở Mỹ có thể ảnh hưởng đến truyền thông kinh doanh. Khách hàng của Apple lo lắng WeChat có thể bị rút khỏi câu chuyện ứng dụng, khiến họ rơi vào tình thế khó xử. Đọc thêm các tin tức: Trung Quốc thành […]</span>
-          </div>
-          <div class="view_more"><span>Đọc tiếp </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
-        </div>
-        <div class="box_news">
-          <div class="img_news"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
-          <div class="title_date">
-            <div class="date">
-              <div class="day"><span>09</span></div>
-              <div class="month"><i>Th.</i><span>08</span></div>
-            </div>
-            <div class="title">
-              <a href="#">Lệnh cấm Wechat, Tiktok của Trump sẽ có tác động gì với chúng ta</a>
-            </div>
-          </div>
-          <div class="content">
-            <span>Lệnh hành pháp của Tổng thống Mỹ cấm ứng dụng nhắn tin ở Mỹ có thể ảnh hưởng đến truyền thông kinh doanh. Khách hàng của Apple lo lắng WeChat có thể bị rút khỏi câu chuyện ứng dụng, khiến họ rơi vào tình thế khó xử. Đọc thêm các tin tức: Trung Quốc thành […]</span>
-          </div>
-          <div class="view_more"><span>Đọc tiếp </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
-        </div> --}}
+   
       </div>
     </div>
     <div class="block_5">
@@ -172,7 +110,7 @@
           <div class="img"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
           <div class="content">
             <div class="title">
-              <a href="#">{{ $new_service->title }}</a><br>
+              <a href="{{ asset('tin-tuc/'.$new_service->id) }}">{{ $new_service->title }}</a><br>
               <span>Dịch vụ chuyển tiền Trung Quốc</span>
             </div>
             <div class="text_ct">
@@ -182,45 +120,7 @@
           </div>
         </div>
         @endforeach
-        {{-- <div class="box_transfers">
-          <div class="img"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
-          <div class="content">
-            <div class="title">
-              <a href="#">CHUYỂN TIỀN TRUNG QUỐC</a><br>
-              <span>Dịch vụ chuyển tiền Trung Quốc</span>
-            </div>
-            <div class="text_ct">
-              <span>Bạn là người Việt Nam bạn đang có nhu cầu sử dụng dịch vụ chuyển tiền Trung Quốc để thanh toán tiền hàng? Hay muốn chuyển tiền cho người thân bạn bè đang cư trú bên đó? Nắm bắt được tình hình trên hiện nay có rất nhiều các loại dịch vụ chuyển tiền nhanh […]</span>
-            </div>
-            <div class="view_more"><span>Tìm hiểu thêm </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
-          </div>
-        </div>
-        <div class="box_transfers">
-          <div class="img"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
-          <div class="content">
-            <div class="title">
-              <a href="#">CHUYỂN TIỀN TRUNG QUỐC</a><br>
-              <span>Dịch vụ chuyển tiền Trung Quốc</span>
-            </div>
-            <div class="text_ct">
-              <span>Bạn là người Việt Nam bạn đang có nhu cầu sử dụng dịch vụ chuyển tiền Trung Quốc để thanh toán tiền hàng? Hay muốn chuyển tiền cho người thân bạn bè đang cư trú bên đó? Nắm bắt được tình hình trên hiện nay có rất nhiều các loại dịch vụ chuyển tiền nhanh […]</span>
-            </div>
-            <div class="view_more"><span>Tìm hiểu thêm </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
-          </div>
-        </div> --}}
-        {{-- <div class="box_transfers">
-          <div class="img"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
-          <div class="content">
-            <div class="title">
-              <a href="#">CHUYỂN TIỀN TRUNG QUỐC</a><br>
-              <span>Dịch vụ chuyển tiền Trung Quốc</span>
-            </div>
-            <div class="text_ct">
-              <span>Bạn là người Việt Nam bạn đang có nhu cầu sử dụng dịch vụ chuyển tiền Trung Quốc để thanh toán tiền hàng? Hay muốn chuyển tiền cho người thân bạn bè đang cư trú bên đó? Nắm bắt được tình hình trên hiện nay có rất nhiều các loại dịch vụ chuyển tiền nhanh […]</span>
-            </div>
-            <div class="view_more"><span>Tìm hiểu thêm </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
-          </div>
-        </div> --}}
+        
       </div>
     </div>
     <div class="block_6">

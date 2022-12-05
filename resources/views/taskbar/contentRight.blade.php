@@ -1,5 +1,14 @@
 
 <link href="{{ asset('./css/contentRight.css') }}" rel="stylesheet" type="text/css" />
+
+    @php
+        use App\Models\News;
+
+        $new_advises = News::where('idcat','=','6')->select('id','title','img','content')->orderBy('id','desc')->paginate(2);
+
+
+    @endphp
+
 @if (\Session::has('success'))
     <div class="alert alert-success">
         <ul>
@@ -20,18 +29,20 @@
     </div>
     <div class="advise">
         <h4>Góc tư vấn</h4>
+        @foreach($new_advises as $new)
             <div class="box-data">
-                <div class="img"><a href=""><img src="./image/china-ethnic-map-650-1.jpg" alt=""></a></div>
+                <div class="img"><a href=""><img src="https://chuyentienviettrung.vn/wp-content/uploads/2020/05/china-ethnic-map-650-1.jpg" alt=""></a></div>
+                <div class="title">
+                    <a href="">{{ $new->title }}</a>
+                </div>
+            </div>
+        @endforeach
+            {{-- <div class="box-data">
+                <div class="img"><a href=""><img src="https://chuyentienviettrung.vn/wp-content/uploads/2020/05/china-ethnic-map-650-1.jpg" alt=""></a></div>
                 <div class="title">
                     <a href="">Trung quốc có bao nhiêu dân tộc?Dân tộc Hán + 55 dân tộc thiểu số</a>
                 </div>
-            </div>
-            <div class="box-data">
-                <div class="img"><a href=""><img src="./image/china-ethnic-map-650-1.jpg" alt=""></a></div>
-                <div class="title">
-                    <a href="">Trung quốc có bao nhiêu dân tộc?Dân tộc Hán + 55 dân tộc thiểu số</a>
-                </div>
-            </div>
+            </div> --}}
     </div>
     <div class="contact">
         <h4>Liên hệ</h4>
