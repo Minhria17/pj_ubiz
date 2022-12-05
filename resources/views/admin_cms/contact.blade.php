@@ -8,7 +8,7 @@
     Danh sách phản hồi
 @endsection
 
-@section('news')
+@section('contact')
 active
 @endsection
  

@@ -90,7 +90,7 @@
             </a>
            </li>
            <li class="nav-item has-treeview">
-            <a href="{{ url('admin_ubiz@2022/contact') }}" class="nav-link  @yield('news_cat')">
+            <a href="{{ url('admin_ubiz@2022/contact') }}" class="nav-link  @yield('contact')">
               <i class="fas fa-mobile-alt"></i>
               <p>
                 Quản lý liên hệ
