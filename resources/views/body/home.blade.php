@@ -32,8 +32,10 @@
           <span>{{ $rate->purchase_rate }}</span>
         </div>
         <div class="box_2">
+
           <h2>TỈ GIÁ BÁN</h2>
           <span>{{ $rate->selling_rate }}</span>
+
         </div>
         <div class="box_3">
           <h2>TỈ GIÁ THANH TOÁN HỘ 1688</h2>
@@ -87,7 +89,9 @@
               <div class="month"><i>Th.</i><span>08</span></div>
             </div>
             <div class="title">
+
               <a href="{{ asset('tin-tuc/'.$new_advise->id) }}">{{ $new_advise->title }}</a>
+
             </div>
           </div>
           <div class="content">
@@ -95,8 +99,10 @@
           </div>
           <div class="view_more"><span>Đọc tiếp </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
         </div>
+
         @endforeach
    
+     
       </div>
     </div>
     <div class="block_5">
@@ -110,7 +116,11 @@
           <div class="img"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
           <div class="content">
             <div class="title">
+
               <a href="{{ asset('tin-tuc/'.$new_service->id) }}">{{ $new_service->title }}</a><br>
+
+              
+
               <span>Dịch vụ chuyển tiền Trung Quốc</span>
             </div>
             <div class="text_ct">
@@ -119,8 +129,10 @@
             <div class="view_more"><span>Tìm hiểu thêm </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
           </div>
         </div>
+
         @endforeach
         
+      
       </div>
     </div>
     <div class="block_6">

@@ -14,11 +14,12 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-Route::get('/', [AdminController::class,'getHome']);
+Route::get('/', [AdminController::class,'getHome']); 
 
 Route::get('/contact', function () {
     return view('body.contact');
 });
+
 
 
 Route::get('/admin_ubiz@2022', function () {

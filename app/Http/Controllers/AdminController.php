@@ -49,10 +49,20 @@ class AdminController extends Controller
             return redirect('admin_ubiz@2022/add_news/')->with(['flash_level' => 'danger' , 'flash_message' => 'Vui lòng điền vào các trường có *' ]);
     }
 
+    if ($request->hasFile('img')) {
+        $image = $request->file('img');
+        $teaser_image = $request->file('img')->getClientOriginalName();
+        $destinationPath = public_path('/image');
+        $image->move($destinationPath, $teaser_image);
+    } else {
+    dd('Request Has No File');
+    }
+
+
     $News = new News;
     $News->idcat = $request->idcat;
     $News->title = $request->Title;
-    $News->img = $request->Img;
+    $News->img = $request->file('img')->getClientOriginalName();
     $News->content = $request->Content;
 
     $Flag =$News->save();  
@@ -238,11 +248,12 @@ class AdminController extends Controller
         $new_services =  News::where('idcat','=','5')->select('id','title','img','content')->orderBy('id','desc')->paginate(4);
 
         $rate = Rate::find(1);
+
         return view('body.home',compact('news_hot','new_advises','new_services','rate'));
     }
 
     public function getNews(){
-        $news = News::get();
+        $news = News::get(); 
 
         return view('body.news',compact('news'));
 
