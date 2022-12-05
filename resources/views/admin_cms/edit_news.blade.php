@@ -54,7 +54,7 @@ active
               
               <div class="form-group">
                 <label for="exampleInputEmail1">Mô tả tin tức <span style="color: red">*</span> </label>
-                <textarea name="Content" id="editor" class="form-control" rows="8">{{ $news->content }}</textarea>
+                <textarea name="Content" class="form-control" rows="8">{{ $news->content }}</textarea>
                
               </div>
          

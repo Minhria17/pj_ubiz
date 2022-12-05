@@ -80,17 +80,17 @@
                 <div class="col-md-3">
                     <h4>Dịch vụ</h4>
                     <ul class="list list-footer-nav">
-                        <li><a href="https://chuyentienviettrung.vn/trung-quoc/" target="_blank">Chuyển tiền trung
+                        <li><a href="{{ asset('trung-quoc') }}" target="_blank">Chuyển tiền trung
                                 quốc</a>
                         </li>
-                        <li><a href="https://chuyentienviettrung.vn/trung-quoc-ve-viet-nam/" target="_blank">Chuyển tiền
+                        <li><a href="{{ asset('trung-quoc-ve-viet-nam') }}" target="_blank">Chuyển tiền
                                 Trung Quốc về Việt Nam</a></li>
-                        <li><a href="https://chuyentienviettrung.vn/wechat/" target="_blank">Chuyển tiền Wechat</a></li>
-                        <li><a href="https://chuyentienviettrung.vn/nap-tien-alipay/" target="_blank">Nạp tiền
+                        <li><a href="{{ asset('wechat') }}" target="_blank">Chuyển tiền Wechat</a></li>
+                        <li><a href="{{ asset('nap-tien-alipay') }}" target="_blank">Nạp tiền
                                 Alipay</a>
                         </li>
-                        <li><a href="https://chuyentienviettrung.vn/order/" target="_blank">Order</a></li>
-                        <li><a href="https://chuyentienviettrung.vn/van-chuyen-hang-tu-trung-quoc-ve-viet-nam/"
+                        <li><a href="#" target="_blank">Order</a></li>
+                        <li><a href="#"
                                 target="_blank">Vận chuyển hàng từ trung quốc về việt nam</a></li>
                     </ul>
                 </div>
@@ -111,8 +111,8 @@
                         </form>
                     </div>
                     <p> <i class="fa fa-map-marker"></i> 219 Đội Cấn, Ba Đình, Hà Nội<br> <i class="fa fa-phone"></i> <a
-                            href="tel:0964552688">0964 552 688</a> <i class="fa fa-envelope ml-sm"></i> <a
-                            href="mailto:chuyentienchina@gmail.com">chuyentienchina@gmail.com</a></p>
+                            href="#">0964 552 688</a> <i class="fa fa-envelope ml-sm"></i> <a
+                            href="#">chuyentienchina@gmail.com</a></p>
                 </div>
             </div> <a
                 href="https://www.dmca.com/Protection/Status.aspx?ID=6f30d7e2-8ba6-4cde-9660-385df9a75ac2&amp;refurl=https://chuyentienviettrung.vn/gioi-thieu/"
@@ -123,7 +123,7 @@
             <div class="footer-copyright">
                 <div class="row">
                     <div class="col-md-12 center">
-                        <p>© Copyright 2017 - 2022 by <a href="https://chuyentienviettrung.vn/"
+                        <p>©  2017 - 2022  <a href="#"
                                 target="_blank">chuyentienviettrung.vn</a></p>
                     </div>
                 </div>

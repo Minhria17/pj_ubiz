@@ -191,3 +191,15 @@
 .content-news > h5 > a:hover{
     text-decoration: underline;
 }
+
+ .btn-send{
+    margin-top: 1%;
+}
+ .btn-send button{
+    color: #fff;
+    background-color: #1030e6;
+    border-color: #e04622 #e04622 #b63719;
+    border: none;
+    padding: 8px;
+    font-size: 14px;
+}
