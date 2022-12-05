@@ -22,7 +22,8 @@ active
       </div>
       <!-- /.card-header -->
       <!-- form start -->
-      <form role="form" action="{{ url('admin_ubiz@2022/add_news')}}" method="POST">
+      <form role="form" action="{{ url('admin_ubiz@2022/add_news')}}" method="POST" enctype="multipart/form-data">
+        {{ csrf_field() }}
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
         <div class="card-body">
            
@@ -49,7 +50,7 @@ active
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Thêm Ảnh  </label>
-            <textarea name="Img" id="" class="form-control" rows="2"></textarea>
+            <input type="file" name="img">
           </div>
           
           <div class="form-group">

@@ -29,19 +29,19 @@
       <div class="box_exchange_rate">
         <div class="box_1">
           <h2>TỈ GIÁ MUA</h2>
-          <span>{{ $rate->purchase_rate }}</span>
+          {{-- <span>{{ $rate->purchase_rate }}</span> --}}
         </div>
         <div class="box_2">
-          <h2>{{ $rate->selling_rate }}</h2>
+          {{-- <h2>{{ $rate->selling_rate }}</h2> --}}
           <span>3490</span>
         </div>
         <div class="box_3">
           <h2>TỈ GIÁ THANH TOÁN HỘ 1688</h2>
-          <span>{{ $rate->payment_rate }}</span>
+          {{-- <span>{{ $rate->payment_rate }}</span> --}}
         </div>
         <div class="box_4">
           <h2>TỈ GIÁ QUÉT MÃ TAOBAO</h2>
-          <span>{{ $rate->sweep_rate}}</span>
+          {{-- <span>{{ $rate->sweep_rate}}</span> --}}
         </div>
       </div>
     </div>
@@ -109,7 +109,7 @@
         <a href="#">Xem thêm bài viết</a>
       </div>
       <div class="data_news">
-        @foreach($new_advises as $new_advise)
+        {{-- @foreach($new_advises as $new_advise) --}}
         <div class="box_news">
           <div class="img_news"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
           <div class="title_date">
@@ -118,15 +118,15 @@
               <div class="month"><i>Th.</i><span>08</span></div>
             </div>
             <div class="title">
-              <a href="#">{{ $new_advise->title }}</a>
+              {{-- <a href="#">{{ $new_advise->title }}</a> --}}
             </div>
           </div>
           <div class="content">
-            <span>{{ $new_advise->content }}</span>
+            {{-- <span>{{ $new_advise->content }}</span> --}}
           </div>
           <div class="view_more"><span>Đọc tiếp </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
         </div>
-        @endforeach
+        {{-- @endforeach --}}
         {{-- <div class="box_news">
           <div class="img_news"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
           <div class="title_date">
@@ -167,21 +167,21 @@
         <span>Các dịch vụ tại chuyentienviettrung.vn</span>
       </div>
       <div class="data_transfers">
-        @foreach($new_services as $new_service)
+        {{-- @foreach($new_services as $new_service) --}}
         <div class="box_transfers">
           <div class="img"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
           <div class="content">
             <div class="title">
-              <a href="#">{{ $new_service->title }}</a><br>
+              {{-- <a href="#">{{ $new_service->title }}</a><br> --}}
               <span>Dịch vụ chuyển tiền Trung Quốc</span>
             </div>
             <div class="text_ct">
-              <span>{{ $new_service->content }}</span>
+              {{-- <span>{{ $new_service->content }}</span> --}}
             </div>
             <div class="view_more"><span>Tìm hiểu thêm </span><i class="fa fa-long-arrow-right" style="color:#1030e6"></i></div>
           </div>
         </div>
-        @endforeach
+        {{-- @endforeach --}}
         {{-- <div class="box_transfers">
           <div class="img"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
           <div class="content">
