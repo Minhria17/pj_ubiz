@@ -14,9 +14,7 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-Route::get('/', function () {
-    return view('body.home');
-});
+Route::get('/', [AdminController::class,'getHome']);
 
 Route::get('/contact', function () {
     return view('body.contact');
@@ -27,6 +25,7 @@ Route::get('/admin_ubiz@2022', function () {
     return view('admin_cms.home');
 });
 
+//news
 Route::get('/admin_ubiz@2022/news',[AdminController::class,'getIndex']);
 Route::get('/admin_ubiz@2022/add_news',[AdminController::class,'getAdd_news']);
 Route::post('/admin_ubiz@2022/add_news',[AdminController::class,'news_add']);
@@ -34,13 +33,19 @@ Route::get('/admin_ubiz@2022/edit_news/{id}',[AdminController::class,'getEdit_ne
 Route::post('/admin_ubiz@2022/edit_news/{id}',[AdminController::class,'news_edit']);
 Route::get('/admin_ubiz@2022/delete_news/{id}',[AdminController::class,'news_delete']);
 
-
+//news_Catogory
 Route::get('/admin_ubiz@2022/list_news_cat',[AdminController::class,'news_cat_list']);
 Route::get('/admin_ubiz@2022/edit_news_cat/{id}',[AdminController::class,'news_cat_getedit']);
 Route::post('/admin_ubiz@2022/edit_news_cat/{id}',[AdminController::class,'news_cat_edit']);
 Route::get('/admin_ubiz@2022/add_news_cat',[AdminController::class,'news_cat_getadd']);
 Route::post('/admin_ubiz@2022/add_news_cat',[AdminController::class,'news_cat_add']);
 Route::get('/admin_ubiz@2022/delete_news_cat/{id}',[AdminController::class,'news__cat_delete']);
+
+//rate-tỉ giá
+Route::get('/admin_ubiz@2022/edit_rate/{id}',[AdminController::class,'getRateEdit']);
+Route::post('/admin_ubiz@2022/edit_rate/{id}',[AdminController::class,'RateEdit']);
+
+
 
 
 Route::get('/gioi-thieu', function () {
@@ -49,12 +54,10 @@ Route::get('/gioi-thieu', function () {
 Route::get('/ty-gia-nhan-dan-te', function () {
     return view('body.exchange_rate');
 });
-Route::get('/tin-tuc', function () {
-    return view('body.news');
-});
-Route::get('/goc-tu-van', function () {
-    return view('body.advise');
-});
+Route::get('/tin-tuc', [AdminController::class,'getNews']);
+
+Route::get('/goc-tu-van', [AdminController::class,'getAdvise']);
+
 Route::get('/trung-quoc', function () {
     return view('body.china');
 });
@@ -80,6 +83,5 @@ Route::get('/admin_ubiz@2022/contact',[AdminController::class,'contact']);
 Route::get('/admin_ubiz@2022/delete_contact/{id}',[AdminController::class,'contact_delete']);
 
 Route::post('admin_ubiz@2022/insert_contact',[AdminController::class,'contact_insert']);
-// Route::get('/admin_ubiz@2022/insert_contact',[AdminController::class,'contact_insert']);
 
-// Route::post('/admin_ubiz@2022/insert_contact', 'AdminController@contact_insert');
+

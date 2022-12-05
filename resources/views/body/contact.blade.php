@@ -11,21 +11,33 @@
                 <img src="https://chuyentienviettrung.vn/wp-content/uploads/2018/09/chuyentien.png" alt="">
                 <p> Bạn đang cần liên hệ với chúng tôi để sử dụng dịch vụ ?</p>
                 <p><em>Chúng tôi không cung cấp dịch vụ của mình trên facebook. Khách hàng nên chú ý cảnh giác tránh mất tiền đáng tiếc!    </em></p>
-                <form action="" class="contact-form">
+
+                @if (\Session::has('success'))
+                    <div class="alert alert-success">
+                        <ul>
+                            <li>{!! \Session::get('success') !!}</li>
+                        </ul>
+                    </div>
+                @endif
+
+                <form  method="POST"  action="{{ url('admin_ubiz@2022/insert_contact') }}" class="contact-form" enctype="multipart/form-data">
+                    @csrf
                     <div class="contact-us">
                         <div class="name">
                             <label for="">Họ Và Tên*</label> <br>
-                            <input type="text" maxlength="100" placeholder="Họ và tên của bạn ..." required> 
+                            <input name="name" type="text" maxlength="100" placeholder="Họ và tên của bạn ..." required> 
                         </div>
                         <div class="phone">
                             <label for="">Số Điện Thoại*</label><br>
-                            <input type="number" maxlength="100" placeholder="Số Điện Thoại..." required>
+                            <input name="phone" type="number" maxlength="100" placeholder="Số Điện Thoại..." required>
                         </div>
                         <div class="text">
                             <label for="">Lời nhắn*</label><br>
-                           <textarea name="" id="" cols="30" rows="10" placeholder="Viết lời nhắn ..." required ></textarea>
+                           <textarea name="note" id="" cols="30" rows="10" placeholder="Viết lời nhắn ..." required ></textarea>
                         </div>
-                        <input value="Gửi thông tin" class="btn-submit" data-loading-text="Đang gửi..." type="submit">
+                        <div class="btn-send">
+                            <button type="submit">Gửi thông tin</button>
+                        </div>
     
                         
                     </div>

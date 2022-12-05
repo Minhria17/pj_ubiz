@@ -39,7 +39,7 @@ active
         <tr>
           <th style="text-align: center">STT </th>
           <th style="text-align: center">Tên Tin tức</th>
-          <th style="text-align: center"  width = 200px>Thuộc danh mục</th>
+          <th style="text-align: center" class="okela" >Thuộc danh mục</th>
           <th style="text-align: center">Ảnh </th>
           <th style="text-align: center">Nội Dung</th>
          

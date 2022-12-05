@@ -75,7 +75,7 @@
        
           <li class="nav-item has-treeview ">
             <a href="{{ url('admin_ubiz@2022/news') }}" class="nav-link @yield('news') ">
-              <i class="fas fa-cog fa-fw"></i>
+              <i class="fas fa-solid fa-newspaper"></i>
               <p>
                Quản lý tin tức
               </p>
@@ -90,10 +90,19 @@
             </a>
            </li>
            <li class="nav-item has-treeview">
-            <a href="{{ url('admin_ubiz@2022/contact') }}" class="nav-link  @yield('news_cat')">
+            <a href="{{ url('admin_ubiz@2022/contact') }}" class="nav-link  @yield('contact')">
               <i class="fas fa-mobile-alt"></i>
               <p>
                 Quản lý liên hệ
+            </p>
+            </a>
+           </li>
+           <li class="nav-item has-treeview">
+            <a href="{{ url('admin_ubiz@2022/edit_rate/1') }}" class="nav-link  @yield('rate')">
+              
+            
+              <p>
+                ★ Tỷ giá các loại
             </p>
             </a>
            </li>

@@ -7,6 +7,7 @@ use App\Models\User;
 
 use App\Models\News;
 use App\Models\Newscategory;
+use App\Models\Rate;
 
 
 use Illuminate\Support\Facades\File;
@@ -203,6 +204,9 @@ class AdminController extends Controller
         return redirect('admin_ubiz@2022/contact')->with(['flash_level' => 'danger' , 'flash_message' => 'Lỗi xóa liên hệ' ]);
        }
     }
+
+    // --------------------------------------- CONTACT -----------------------------------------------
+
     public function contact_insert(Request $request,contact $contact){
 
     $contact = new contact;
@@ -221,5 +225,68 @@ class AdminController extends Controller
     }
 
 
+   
+
+
+    //--------------------------------------------- WEBSITE----------------------------------------
+
+    public function getHome(){
+        $news_hot = News::select('title','img','content')->orderBy('id','desc')->paginate(3);
+
+        $new_advises = News::where('idcat','=','6')->select('title','img','content')->orderBy('id','desc')->paginate(3);
+
+        $new_services =  News::where('idcat','=','5')->select('title','img','content')->orderBy('id','desc')->paginate(4);
+
+        $rate = Rate::find(1);
+        return view('body.home',compact('news_hot','new_advises','new_services','rate'));
+    }
+
+    public function getNews(){
+        $news = News::get();
+
+        return view('body.news',compact('news'));
+
+    }
+
+    public function getAdvise(){
+        $new_advises = News::where('idcat','=','6')->orderBy('id','desc')->first();
+
+        $new_advises_child = News::where('idcat','=','6')->select('title','img','content')->orderBy('id','desc')->paginate(3);
+
+        return view('body.advise',compact('new_advises','new_advises_child'));
+
+    }
+
+    // ---------------------------------RATE -----------------------------------
+
+
+    public function getRateEdit(){
+        $rate = Rate::find(1);
+
+        return view('admin_cms.edit_rate',compact('rate'));
+
+        
+    }
+    public function RateEdit(Request $request,$id){
+
+
+        if ($request->purchase_rate == '' || $request->selling_rate == '' || $request->payment_rate == '' || $request->sweep_rate == '' ){
+            return redirect('admin_ubiz@2022/edit_rate/'.$id)->with(['flash_level' => 'danger' , 'flash_message' => 'Vui lòng điều vào các trường có *' ]);
+    }
+
+    $Rate = Rate::find($id);
+    $Rate->purchase_rate = $request->purchase_rate;
+    $Rate->selling_rate = $request->selling_rate;
+    $Rate->payment_rate = $request->payment_rate;
+    $Rate->sweep_rate = $request->sweep_rate;
+
+    $Flag =$Rate->save();  
+
+    if ($Flag == true) {
+        return redirect('admin_ubiz@2022/edit_rate/'.$id)->with(['flash_level' => 'success' , 'flash_message' => 'Chỉnh sửa tỉ lệ thành công' ]);
+   }else{
+    return redirect('admin_ubiz@2022/edit_rate/'.$id)->with(['flash_level' => 'danger' , 'flash_message' => 'Lỗi Chỉnh sửa' ]);
+   }
+    }
 
 }
