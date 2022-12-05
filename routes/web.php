@@ -77,9 +77,13 @@ Route::get('/nap-tien-alipay', function () {
 Route::get('/wechat', function () {
     return view('body.wechat');
 });
-Route::get('/news-detail', function () {
-    return view('body.news_detail');
-});
+// Route::get('/news-detail', function () {
+//     return view('body.news_detail');
+// });
+
+
+Route::get('/tin-tuc/{id}',[AdminController::class,'getNews_detail'])->name('news_detail');
+
 Route::get('/admin_ubiz@2022/contact',[AdminController::class,'contact']);
 Route::get('/admin_ubiz@2022/delete_contact/{id}',[AdminController::class,'contact_delete']);
 

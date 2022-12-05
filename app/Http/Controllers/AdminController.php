@@ -51,7 +51,7 @@ class AdminController extends Controller
 
     if ($request->hasFile('img')) {
         $image = $request->file('img');
-        $teaser_image = time().'.'.$image->getClientOriginalExtension();
+        $teaser_image = $request->file('img')->getClientOriginalName();
         $destinationPath = public_path('/image');
         $image->move($destinationPath, $teaser_image);
     } else {
@@ -241,11 +241,11 @@ class AdminController extends Controller
     //--------------------------------------------- WEBSITE----------------------------------------
 
     public function getHome(){
-        $news_hot = News::select('title','img','content')->orderBy('id','desc')->paginate(3);
+        $news_hot = News::select('id','title','img','content')->orderBy('id','desc')->paginate(3);
 
-        $new_advises = News::where('idcat','=','6')->select('title','img','content')->orderBy('id','desc')->paginate(3);
+        $new_advises = News::where('idcat','=','6')->select('id','title','img','content')->orderBy('id','desc')->paginate(3);
 
-        $new_services =  News::where('idcat','=','5')->select('title','img','content')->orderBy('id','desc')->paginate(4);
+        $new_services =  News::where('idcat','=','5')->select('id','title','img','content')->orderBy('id','desc')->paginate(4);
 
         $rate = Rate::find(1);
 
@@ -267,6 +267,8 @@ class AdminController extends Controller
         return view('body.advise',compact('new_advises','new_advises_child'));
 
     }
+
+
 
     // ---------------------------------RATE -----------------------------------
 
@@ -298,6 +300,21 @@ class AdminController extends Controller
    }else{
     return redirect('admin_ubiz@2022/edit_rate/'.$id)->with(['flash_level' => 'danger' , 'flash_message' => 'Lỗi Chỉnh sửa' ]);
    }
+    }
+
+
+    //=------------------------------ NEWS DETAIL- ---------------------------------
+
+    function getNews_detail($id)
+    {
+        $news = News::findOrFail($id);
+
+       
+
+        $data = [
+            'news' => $news
+        ];
+        return view('body.news_detail', $data);
     }
 
 }
