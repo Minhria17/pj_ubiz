@@ -48,6 +48,10 @@ active
                 <input type="text" class="form-control" name="Title" value="{{ $news->title }}" >
               </div>
               <div class="form-group">
+                <label for="exampleInputEmail1">Nội Dung Tóm Tắt<span style="color: red">*</span> </label>
+                <input type="text" class="form-control" name="slogan" value="{{ $news->slogan }}" >
+              </div>
+              <div class="form-group">
                 <label for="exampleInputEmail1">Thêm Ảnh  </label>
                 <textarea name="Img" id="" class="form-control" rows="2">{{ $news->img }}</textarea>
               </div>

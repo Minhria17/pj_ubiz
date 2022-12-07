@@ -22,12 +22,12 @@ active
           <div class="col-md-6">
             <h1 class="card-title">Danh sách </h1>
           </div>
-          <div class="col-md-6">
+          {{-- <div class="col-md-6">
   
             <a href="{{ url('admin_ubiz@2022/add_news_cat') }}" class="btn btn-block btn-primary" style="width: 100px; background-color : blue;">
              Thêm
             </a>
-          </div>
+          </div> --}}
           
         </div>
 
@@ -68,9 +68,9 @@ active
             <a href="{{ url('admin_ubiz@2022/edit_news_cat/'.$v->id ) }}" title="Chỉnh sửa" style="padding : 1px 7px 3px 8px ; margin-right: 2px; margin-left: 2px; background-color: #007bff; color: #FFF; display :inline-block; border-radius: 4px;">
               <i style="font-size : 14px" class="fas fa-edit"></i>
             </a>
-            <a href="{{ url('admin_ubiz@2022/delete_news_cat/'.$v->id  ) }}" title="Xóa" style="padding : 1px 7px 3px 8px ; margin-right: 2px; margin-left: 2px; background-color: #FF0000; color: #FFF; display :inline-block; border-radius: 4px;">
+            {{-- <a href="{{ url('admin_ubiz@2022/delete_news_cat/'.$v->id  ) }}" title="Xóa" style="padding : 1px 7px 3px 8px ; margin-right: 2px; margin-left: 2px; background-color: #FF0000; color: #FFF; display :inline-block; border-radius: 4px;">
                 <i  class="fas fa-trash-alt"></i>
-              </a>
+              </a> --}}
            
           </td>
         </tr>
