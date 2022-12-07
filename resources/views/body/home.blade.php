@@ -58,8 +58,14 @@
           <div class="img_news"><img src="./image/{{ $new->img }}" alt=""></div>
           <div class="title_date">
             <div class="date">
-              <div class="day"><span>09</span></div>
-              <div class="month"><i>Th.</i><span>08</span></div>
+              @php
+                  $time = explode(' ', $new->created_at);
+                  $a = explode('-', $time[0]);
+                  $day_rs = $a[2];
+                  $month_rs = $a[1];
+              @endphp
+              <div class="day"><span>{{ $day_rs }}</span></div>
+              <div class="month"><i>Th.</i><span>{{ $month_rs }}</span></div>
             </div>
             <div class="title">
               <a href="{{ asset('tin-tuc/'.$new->id) }}">{{ $new->title }}</a>
@@ -82,11 +88,18 @@
       <div class="data_news">
         @foreach($new_advises as $new_advise)
         <div class="box_news">
-          <div class="img_news"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+          <div class="img_news"><img src="./image/{{ $new_advise->img }}" alt=""></div>
           <div class="title_date">
             <div class="date">
-              <div class="day"><span>09</span></div>
-              <div class="month"><i>Th.</i><span>08</span></div>
+              @php
+                    $time = explode(' ', $new_advise->created_at);
+                    $a = explode('-', $time[0]);
+                    $day_rs = $a[2];
+                    $month_rs = $a[1];
+              @endphp 
+
+              <div class="day"><span>{{ $day_rs }}</span></div>
+              <div class="month"><i>Th.</i><span>{{ $month_rs }}</span></div>
             </div>
             <div class="title">
 
@@ -113,7 +126,7 @@
       <div class="data_transfers">
         @foreach($new_services as $new_service)
         <div class="box_transfers">
-          <div class="img"><img src="./image/Banner-chuyen-tien-trung-quoc.png" alt=""></div>
+          <div class="img"><img src="./image/{{ $new_service->img }}" alt=""></div>
           <div class="content">
             <div class="title">
 

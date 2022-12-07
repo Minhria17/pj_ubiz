@@ -62,6 +62,8 @@ class AdminController extends Controller
     $News = new News;
     $News->idcat = $request->idcat;
     $News->title = $request->Title;
+    $News->slogan = $request->slogan;
+
     $News->img = $request->file('img')->getClientOriginalName();
     $News->content = $request->Content;
 
@@ -109,6 +111,7 @@ class AdminController extends Controller
     $News =  News::find($id);
     $News->idcat = $request->idcat;
     $News->title = $request->Title;
+    $News->slogan = $request->slogan;
     $News->img = $request->Img;
     $News->content = $request->Content;
 
@@ -241,13 +244,15 @@ class AdminController extends Controller
     //--------------------------------------------- WEBSITE----------------------------------------
 
     public function getHome(){
-        $news_hot = News::select('id','title','img','content')->orderBy('id','desc')->paginate(3);
+        $news_hot = News::select()->orderBy('id','desc')->paginate(3);
 
-        $new_advises = News::where('idcat','=','6')->select('id','title','img','content')->orderBy('id','desc')->paginate(3);
+        $new_advises = News::where('idcat','=','6')->select()->orderBy('id','desc')->paginate(3);
 
-        $new_services =  News::where('idcat','=','5')->select('id','title','img','content')->orderBy('id','desc')->paginate(4);
+        $new_services =  News::where('idcat','=','1')->orwhere('idcat','=','2')->orwhere('idcat','=','3')->orwhere('idcat','=','7')->select()->orderBy('id','desc')->paginate(4);
 
         $rate = Rate::find(1);
+        
+        
 
         return view('body.home',compact('news_hot','new_advises','new_services','rate'));
     }
@@ -259,12 +264,56 @@ class AdminController extends Controller
 
     }
 
+    public function getExchange_rate(){
+        $rate = Rate::find(1); 
+
+        return view('body.exchange_rate',compact('rate'));
+
+    }
+
     public function getAdvise(){
         $new_advises = News::where('idcat','=','6')->orderBy('id','desc')->first();
 
-        $new_advises_child = News::where('idcat','=','6')->select('title','img','content')->orderBy('id','desc')->paginate(3);
+        $new_advises_child = News::where('idcat','=','6')->select()->orderBy('id','desc')->paginate(3);
 
         return view('body.advise',compact('new_advises','new_advises_child'));
+
+    }
+
+    
+    public function getchangeTrung(){
+        $new_changes = News::where('idcat','=','1')->orderBy('id','desc')->first();
+
+        $new_changes_child = News::where('idcat','=','1')->select()->orderBy('id','desc')->paginate(3);
+
+        return view('body.china',compact('new_changes','new_changes_child'));
+
+    }
+
+    public function getchangeTrung_Viet(){
+        $new_changes = News::where('idcat','=','2')->orderBy('id','desc')->first();
+
+        $new_changes_child = News::where('idcat','=','2')->select()->orderBy('id','desc')->paginate(3);
+
+        return view('body.china_vietnam',compact('new_changes','new_changes_child'));
+
+    }
+
+    public function getRecharge(){
+        $new_Recharge = News::where('idcat','=','3')->orderBy('id','desc')->first();
+
+        $new_Recharge_child = News::where('idcat','=','3')->select()->orderBy('id','desc')->paginate(3);
+
+        return view('body.alipay',compact('new_Recharge','new_Recharge_child'));
+
+    }
+
+    public function getWebchat(){
+        $new_webchat = News::where('idcat','=','7')->orderBy('id','desc')->first();
+
+        $new_webchat_child = News::where('idcat','=','7')->select()->orderBy('id','desc')->paginate(3);
+
+        return view('body.wechat',compact('new_webchat','new_webchat_child'));
 
     }
 

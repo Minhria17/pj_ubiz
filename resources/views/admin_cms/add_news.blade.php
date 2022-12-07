@@ -49,6 +49,10 @@ active
             <input type="text" class="form-control" name="Title" value="" >
           </div>
           <div class="form-group">
+            <label for="exampleInputEmail1">Tóm Tắt Nội Dung <span style="color: red">*</span> </label>
+            <input type="text" class="form-control" name="slogan" value="" >
+          </div>
+          <div class="form-group">
             <label for="exampleInputEmail1">Thêm Ảnh  </label>
             <input type="file" name="img">
           </div>

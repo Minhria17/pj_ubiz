@@ -1,5 +1,15 @@
 @extends('layouts.master')
 <link href="{{ asset('./css/contact.css') }}" rel="stylesheet" type="text/css" />
+
+
+@php
+use App\Models\News;
+
+$new_advises = News::where('idcat','=','6')->select('id','title','img','content')->orderBy('id','desc')->paginate(3);
+
+
+@endphp
+
 @section('content')
 	<div class="contact-title">
         <h1>LIÊN HỆ</h1>
@@ -60,10 +70,10 @@
                 <h4>Dịch vụ</h4>
                 <div class="list-navbar">
                     <ul class="list-nav">
-                        <li><a href="">> Chuyển tiền trung quốc</a></li>
-                        <li><a href="">> Chuyển tiền Trung Quốc về Việt Nam</a></li>
-                        <li><a href="">> Chuyển tiền Wechat</a></li>
-                        <li><a href="">> Nạp tiền Alipay</a></li>
+                        <li><a href="{{ asset('trung-quoc') }}">> Chuyển tiền trung quốc</a></li>
+                        <li><a href="{{ asset('trung-quoc-ve-viet-nam') }}">> Chuyển tiền Trung Quốc về Việt Nam</a></li>
+                        <li><a href="{{ asset('wechat') }}">> Chuyển tiền Wechat</a></li>
+                        <li><a href="{{ asset('nap-tien-alipay') }}">> Nạp tiền Alipay</a></li>
                         <li><a href="">> Order</a></li>
                         <li><a href="">> Vận chuyển hàng từ trung quốc về việt nam</a></li>
                     </ul>
@@ -73,18 +83,12 @@
     
                 <h4>Góc tư vấn</h4>
                 <div class="news_content">
+        @foreach($new_advises as $new)
                     <div class="content-news">
-                        <img src="https://chuyentienviettrung.vn/wp-content/uploads/2020/05/china-ethnic-map-650-1.jpg" alt="" class="img-news">
-                        <h5><a href="#">Những điều bạn chưa biết về văn hóa làm việc của người trung quốc</a></h5>
+                        <img src="./image/{{ $new->img }}" alt="" class="img-news">
+                        <h5><a href="{{ asset('tin-tuc/'.$new->id) }}">{{ $new->title }}</a></h5>
                     </div>
-                    <div class="content-news">
-                        <img src="https://chuyentienviettrung.vn/wp-content/uploads/2020/05/china-ethnic-map-650-1.jpg" alt="" class="img-news">
-                        <h5><a href="#">Những điều bạn chưa biết về văn hóa làm việc của người trung quốc</a></h5>
-                    </div>
-                    <div class="content-news">
-                        <img src="https://chuyentienviettrung.vn/wp-content/uploads/2020/05/china-ethnic-map-650-1.jpg" alt="" class="img-news">
-                        <h5><a href="#">Những điều bạn chưa biết về văn hóa làm việc của người trung quốc</a></h5>
-                    </div>
+        @endforeach           
                 </div>
            </div>
         </div>

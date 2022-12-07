@@ -39,6 +39,7 @@ active
         <tr>
           <th style="text-align: center">STT </th>
           <th style="text-align: center">Tên Tin tức</th>
+          <th style="text-align: center">Tóm tắt Nội Dung</th>
           <th style="text-align: center" class="okela" >Thuộc danh mục</th>
           <th style="text-align: center">Ảnh </th>
           <th style="text-align: center">Nội Dung</th>
@@ -55,6 +56,7 @@ active
         <tr>
           <td style="text-align: center">{{ $k + 1 }}</td>
           <td style="text-align: center">{{ $v->title }}</td>
+          <td style="text-align: center">{{ $v->slogan }}</td>
           <td style="text-align: center">{{ $v->CategoryName }}</td>
           <td style="text-align: center">{{ $v->img }}</td>
           <td style="text-align: center">{{ $v->content }}</td>

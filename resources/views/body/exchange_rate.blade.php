@@ -13,22 +13,24 @@
                 </div>
                 <div class="box_exchange_rate">
                     <div class="box_1">
-                    <h2>TỈ GIÁ MUA</h2>
-                    <span>3490</span>
+                      <h2>TỈ GIÁ MUA</h2>
+                      <span>{{ $rate->purchase_rate }}</span>
                     </div>
                     <div class="box_2">
-                    <h2>TỈ GIÁ BÁN</h2>
-                    <span>3490</span>
+            
+                      <h2>TỈ GIÁ BÁN</h2>
+                      <span>{{ $rate->selling_rate }}</span>
+            
                     </div>
                     <div class="box_3">
-                    <h2>TỈ GIÁ THANH TOÁN HỘ 1688</h2>
-                    <span>3490</span>
+                      <h2>TỈ GIÁ THANH TOÁN HỘ 1688</h2>
+                      <span>{{ $rate->payment_rate }}</span>
                     </div>
                     <div class="box_4">
-                    <h2>TỈ GIÁ QUÉT MÃ TAOBAO</h2>
-                    <span>3490</span>
+                      <h2>TỈ GIÁ QUÉT MÃ TAOBAO</h2>
+                      <span>{{ $rate->sweep_rate}}</span>
                     </div>
-                </div>
+                  </div>
             </div>
             <div class="attention">
                 <p><span style="color: #1030e6;"><strong>Chú ý:</strong></span></p>
